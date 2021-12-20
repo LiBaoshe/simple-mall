@@ -4,7 +4,6 @@
 ## 模块说明：
 
 - common ：公共模块，公共操作，mybatis-plus 代码生成器等。
-
 - goods：商品模块，使用 AbstractRoutingDataSource 实现读写分离配置。
 - order：订单模块，测试不同方向插入 100 万订单的效率。
 - user：用户模块，配置 mybatis-generator maven 插件生成代码。
