@@ -5,6 +5,9 @@ import com.ibaoge.common.generator.MyBatisPlusGenerator;
 public class UserMybatisGenerator {
 
     public static void main(String[] args) {
-        MyBatisPlusGenerator.generate("shardingsphere", "t_user");
+        MyBatisPlusGenerator.generate(
+                "shardingsphere-jdbc-demo",
+                "com.ibaoge.shardingsphere",
+                new String[]{"t_user"});
     }
 }

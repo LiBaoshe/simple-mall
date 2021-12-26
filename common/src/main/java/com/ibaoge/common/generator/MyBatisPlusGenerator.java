@@ -28,14 +28,14 @@ public class MyBatisPlusGenerator {
     private static final String JDBC_DRIVER = "com.mysql.cj.jdbc.Driver";
     private static final String JDBC_USERNAME = "root";
     private static final String JDBC_PASSWORD = "mysql8";
-    private static final String BASE_PACKAGE = "com.ibaoge";
 
     /**
      * @param moduleName 功能模块名称，生成的文件会存放到模块下
-     * @param tables 表名
+     * @param basePackage 包名
+     * @param tables 表名数组
      */
-    public static void generate(String moduleName, String... tables){
-        System.out.println(MyBatisPlusGenerator.class.getName() + " start run...");
+    public static void generate(String moduleName, String basePackage, String[] tables){
+
         // 代码生成器
         AutoGenerator generator = new AutoGenerator();
         //数据库配置
@@ -43,7 +43,7 @@ public class MyBatisPlusGenerator {
         //全局配置
         configGlobal(generator, moduleName);
         //包相关配置
-        configPackage(generator, moduleName);
+        configPackage(generator, basePackage);
         //策略配置
         configStrategy(generator, tables);
         //自定义配置
@@ -130,10 +130,10 @@ public class MyBatisPlusGenerator {
      * @param generator :
      * @date 2021/2/8 13:34
      */
-    private static void configPackage(AutoGenerator generator, String moduleName) {
+    private static void configPackage(AutoGenerator generator, String basePackage) {
         PackageConfig packageConfig = new PackageConfig();
-        packageConfig.setModuleName(moduleName);
-        packageConfig.setParent(BASE_PACKAGE);//包路径
+//        packageConfig.setModuleName(moduleName);
+        packageConfig.setParent(basePackage);//包路径
         packageConfig.setController("controller");
         packageConfig.setService("service");
         packageConfig.setServiceImpl("service.impl");

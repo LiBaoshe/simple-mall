@@ -1,14 +1,12 @@
-package com.ibaoge.order.generator;
-
+package com.ibaoge.shardingsphere.generator;
 
 import com.ibaoge.common.generator.MyBatisPlusGenerator;
 
-public class OrderMybatisGenerator {
-
+public class OrderGenerator {
     public static void main(String[] args) {
         MyBatisPlusGenerator.generate(
-                "order",
-                "com.ibaoge.order",
+                "shardingsphere-proxy-demo",
+                "com.ibaoge.shardingsphere",
                 new String[]{"t_order"});
     }
 }

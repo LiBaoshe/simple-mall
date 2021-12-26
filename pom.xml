@@ -21,12 +21,16 @@
         <module>goods</module>
         <module>common</module>
         <module>shardingsphere-jdbc-demo</module>
+        <module>shardingsphere-proxy-demo</module>
+        <module>elasticsearch-demo</module>
     </modules>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
         <mybatis-plus.verson>3.3.1</mybatis-plus.verson>
+
+        <elasticsearch.version>7.4.2</elasticsearch.version>
     </properties>
 
     <dependencyManagement>
