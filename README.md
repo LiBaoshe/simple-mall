@@ -4,8 +4,11 @@
 ## 模块说明：
 
 - common ：公共模块，公共操作，mybatis-plus 代码生成器等。
+- elasticsearch-demo es 全文检索 demo
 - goods：商品模块，使用 AbstractRoutingDataSource 实现读写分离配置。
 - order：订单模块，测试不同方向插入 100 万订单的效率。
 - user：用户模块，配置 mybatis-generator maven 插件生成代码。
 - shardingsphere-jdbc-demo 使用 ShardingSphere-JDBC 实现读写分离配置。
+- shardingshpere-proxy-demo 测试使用 ShardingSphere Proxy 水平分库分表后的增删改查操作。
+- hmily-demo hmily 分布式事务使用 demo
 
